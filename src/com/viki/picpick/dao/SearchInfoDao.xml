@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+ <mapper namespace="com.viki.picpick.dao.SearchInfoDao">
+ 	
+ 	<select id="savePic" resultType="com.viki.picpick.beans.SearchInfo">
+ 	 INSERT INTO search_info (u_id,keywords,pic_url) VALUES (1,#{0},#{1});
+ 	</select>
+ 	
+ 	<select id="displayAll" resultType="com.viki.picpick.beans.SearchInfo">
+ 	 SELECT * FROM search_info WHERE keywords=#{keywords};
+ 	</select>
+ 	
+ </mapper>
